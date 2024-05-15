@@ -3,7 +3,7 @@ import HeiwaIcon from 'components/Custom/HeiwaIcon';
 import { twMerge } from 'tailwind-merge';
 import { useHover } from '@uidotdev/usehooks';
 
-const HeiwaCard = ({
+const HeiwaSoundCard = ({
   audio,
   icon,
   name,
@@ -12,7 +12,7 @@ const HeiwaCard = ({
 }) => {
   const [ref, hovering] = useHover();
   let audioPlayer = document.getElementById(name);
-  const isPlaying = !audioPlayer.paused;
+  const isPlaying = !audioPlayer?.paused;
 
   const progressBar = useRef();
   const MAX = 20;
@@ -27,7 +27,7 @@ const HeiwaCard = ({
     <div className='flex h-[160px] w-[160px] relative items-center rounded-lg justify-center hover:shadow-md'>
       <div
         className={twMerge(
-          'bg-gray-50 absolute rounded-lg p-2 hover:shadow-md flex items-center justify-center h-[160px] w-[160px]',
+          'bg-gray-50 absolute rounded-lg p-2 flex items-center justify-center h-[160px] w-[160px]',
           activeAudios.includes(name) &&
             'bg-gradient-to-tr from-green-400 to-yellow-400 via-purple-600 via-cyan-400 to-green-500 animate-pulse'
         )}
@@ -67,4 +67,4 @@ const HeiwaCard = ({
   );
 };
 
-export default HeiwaCard;
+export default HeiwaSoundCard;

@@ -7,10 +7,14 @@ const HeiwaIcon = (props) => {
     icon,
     small = false,
     large = false,
+    extraSmall = false,
     ...rest
   } = props;
 
-  if (small) {
+  if (extraSmall) {
+    height = 20;
+    width = 20;
+  } else if (small) {
     height = 40;
     width = 40;
   } else if (large) {
