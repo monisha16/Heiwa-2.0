@@ -27,7 +27,7 @@ const HeiwaSoundCard = ({
     <div className='flex h-[160px] w-[160px] relative items-center rounded-lg justify-center hover:shadow-md'>
       <div
         className={twMerge(
-          'bg-gray-50 absolute rounded-lg p-2 hover:shadow-md flex items-center justify-center h-[160px] w-[160px]',
+          'bg-gray-50 absolute rounded-lg p-2 flex items-center justify-center h-[160px] w-[160px]',
           activeAudios.includes(name) &&
             'bg-gradient-to-tr from-green-400 to-yellow-400 via-purple-600 via-cyan-400 to-green-500 animate-pulse'
         )}

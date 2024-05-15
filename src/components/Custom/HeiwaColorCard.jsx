@@ -1,17 +1,24 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { useHover } from '@uidotdev/usehooks';
 
 const HeiwaColorCard = (props) => {
   const { color, data } = props;
+  const [ref, hovering] = useHover();
+
   return (
-    <div className='flex flex-col bg-gray-50 rounded w-[250px] h-[300px] items-center hover:shadow-md hover:cursor-pointer justify-center p-4'>
+    <div
+      ref={ref}
+      className='flex flex-col bg-gray-50 rounded w-[250px] h-[300px] shadow hover:shadow-md hover:cursor-pointer p-4'
+    >
       <div
         className={twMerge(
-          `bg-${color}-400 h-full w-full `,
-          color === 'white' && 'bg-white'
+          `bg-${color}-400 min-h-[200px] w-full rounded shadow-md`,
+          color === 'white' && 'bg-white',
+          hovering && `animate-${color}-card-gradient`
         )}
       />
-      <span>{data.title}</span>
+      <span className='text-sm mt-2'>{data.title}</span>
     </div>
   );
 };

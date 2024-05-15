@@ -14,7 +14,7 @@ const navToConst = {
 
 const Header = () => {
   const navigate = useNavigate();
-  const [navTo, setNavTo] = useState('');
+  const [navTo, setNavTo] = useState('home');
 
   const changeNavTo = (nav) => {
     setNavTo(nav);
@@ -24,16 +24,18 @@ const Header = () => {
 
   return (
     <div className='flex items-center m-4'>
-      <HeiwaIcon icon={heiwaLogo} height={50} width={40} className='mr-4' />
-      <div className='flex flex-1 gap-8 justify-center text-base'>
+      {/* <HeiwaIcon icon={heiwaLogo} height={50} width={40} className='mr-4' /> */}
+      <div className='flex flex-1 gap-8 justify-center'>
         {Object.keys(navToConst).map((navKey) => {
           return (
             <div
               key={navKey}
               onClick={() => changeNavTo(navKey)}
               className={twMerge(
-                'hover:cursor-pointer hover:text-teal-500 capitalize',
-                navTo === navKey && 'text-teal-500 border-b-2 border-b-teal-500'
+                "relative text-xl capitalize w-fit block after:block hover:cursor-pointer hover:text-teal-500 after:content-[''] after:absolute after:h-[3px] after:bg-teal-500 after:w-full after:scale-x-0 after:transition after:duration-300 after:origin-center",
+                navTo !== navKey && 'after:hover:scale-x-100',
+                navTo === navKey &&
+                  'after:h-[3px] text-teal-500 border-b-[3px] border-b-teal-500'
               )}
             >
               {navKey}

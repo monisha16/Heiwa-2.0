@@ -72,3 +72,70 @@ input[type="range"]::-webkit-slider-thumb {
   font-size:5rem;
   font-weight: bolder;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-blue-card-gradient {
+  background: radial-gradient(circle,rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.animate-pink-card-gradient {
+  background: radial-gradient(circle,rgba(236, 72, 153, 1) 0%, rgba(244,114,182,1) 35% , rgba(249,168,212,1) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.animate-orange-card-gradient {
+  background: radial-gradient(circle,rgba(255, 59, 0, 1) 0%, rgba(245, 90, 0, 1) 35%,rgba(246, 162, 53,1) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.animate-purple-card-gradient {
+  background:  radial-gradient(circle,rgb(135, 1, 219) 0%, rgb(148, 7, 209) 35%,rgb(193, 83, 215) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.animate-red-card-gradient {
+  background:  radial-gradient(circle,rgb(255, 0, 0) 0%, rgb(249, 60, 60) 35%,rgb(239, 106, 106) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.animate-yellow-card-gradient {
+  background:  radial-gradient(circle,rgb(254, 224, 26) 0%, rgb(255, 209, 2) 35%,rgb(237, 239, 106) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.animate-green-card-gradient {
+  background:  radial-gradient(circle,rgb(73, 196, 1) 0%, rgb(21, 203, 67) 35%,rgb(153, 252, 149) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}
+.animate-white-card-gradient {
+  background:  radial-gradient(circle, rgb(233, 235, 233) 0%,rgb(255, 255, 255) 100%);
+  background-size: 600% 100%;
+  animation: gradient 10s ease-in-out infinite;
+  animation-direction: alternate;
+}

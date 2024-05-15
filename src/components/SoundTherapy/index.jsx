@@ -20,7 +20,12 @@ const SoundTherapy = () => {
 
   return (
     <div className='px-12 flex flex-col items-center justify-center'>
-      <div className='h-[200px]' />
+      <div className='mb-8 mt-[150px] flex flex-col items-center jsutify-center'>
+        <span className='text-xl '>Unwind with Ambient Sounds</span>
+        <span className='text-teal-400 text-xs italic'>
+          click the sound cards to layer them
+        </span>
+      </div>
       <div className='w-[80%] flex flex-wrap gap-4 items-center justify-center'>
         {audioMap.map((item) => {
           return (
