@@ -1,8 +1,18 @@
-# React + Vite
+# Heiwa 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Heiwa 2.0 aims to immerse users in the therapeutic worlds of Color and Sound. It's a revamped version of the original [Heiwa](https://heiwa.netlify.app/), offering enhanced features and experiences.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React + Vite
+- JavaScript
+- Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+To run this project locally, follow these simple steps:
+
+1. Clone the repository.
+2. Run `yarn install` to install dependencies.
+3. Run `yarn dev` to start the development server.
+
+Enjoy exploring the realms of color and sound therapy with Heiwa 2.0!
