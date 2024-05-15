@@ -18,40 +18,28 @@ const Header = () => {
 
   const changeNavTo = (nav) => {
     setNavTo(nav);
-    navigate(`/${nav}`);
+    const navToPath = navToConst[nav];
+    navigate(`/${navToPath}`);
   };
 
   return (
     <div className='flex items-center m-4'>
       <HeiwaIcon icon={heiwaLogo} height={50} width={40} className='mr-4' />
       <div className='flex flex-1 gap-8 justify-center text-base'>
-        <span
-          onClick={() => changeNavTo(navToConst.home)}
-          className={twMerge(
-            'hover:text-base hover:cursor-pointer',
-            navTo === navToConst.home && 'text-teal-500'
-          )}
-        >
-          Home
-        </span>
-        <span
-          onClick={() => changeNavTo(navToConst.color)}
-          className={twMerge(
-            'hover:text-base hover:cursor-pointer',
-            navTo === navToConst.color && 'text-teal-500'
-          )}
-        >
-          Color
-        </span>
-        <span
-          onClick={() => changeNavTo(navToConst.sound)}
-          className={twMerge(
-            'hover:text-base hover:cursor-pointer',
-            navTo === navToConst.sound && 'text-teal-500'
-          )}
-        >
-          Sound
-        </span>
+        {Object.keys(navToConst).map((navKey) => {
+          return (
+            <div
+              key={navKey}
+              onClick={() => changeNavTo(navKey)}
+              className={twMerge(
+                'hover:cursor-pointer hover:text-teal-500 capitalize',
+                navTo === navKey && 'text-teal-500 border-b-2 border-b-teal-500'
+              )}
+            >
+              {navKey}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

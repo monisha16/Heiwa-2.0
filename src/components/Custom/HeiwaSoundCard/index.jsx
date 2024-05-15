@@ -3,7 +3,7 @@ import HeiwaIcon from 'components/Custom/HeiwaIcon';
 import { twMerge } from 'tailwind-merge';
 import { useHover } from '@uidotdev/usehooks';
 
-const HeiwaCard = ({
+const HeiwaSoundCard = ({
   audio,
   icon,
   name,
@@ -12,7 +12,7 @@ const HeiwaCard = ({
 }) => {
   const [ref, hovering] = useHover();
   let audioPlayer = document.getElementById(name);
-  const isPlaying = !audioPlayer.paused;
+  const isPlaying = !audioPlayer?.paused;
 
   const progressBar = useRef();
   const MAX = 20;
@@ -67,4 +67,4 @@ const HeiwaCard = ({
   );
 };
 
-export default HeiwaCard;
+export default HeiwaSoundCard;
