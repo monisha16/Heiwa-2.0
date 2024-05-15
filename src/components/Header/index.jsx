@@ -5,6 +5,7 @@ import HeiwaIcon from '../Custom/HeiwaIcon';
 
 import { useNavigate } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
+import AboutMe from '../AboutMe';
 
 const navToConst = {
   home: '',
@@ -23,9 +24,9 @@ const Header = () => {
   };
 
   return (
-    <div className='flex items-center m-4'>
-      {/* <HeiwaIcon icon={heiwaLogo} height={50} width={40} className='mr-4' /> */}
-      <div className='flex flex-1 gap-8 justify-center'>
+    <div className='flex items-center justify-between m-4'>
+      <HeiwaIcon icon={heiwaLogo} height={50} width={40} className='mr-4' />
+      <div className='flex flex-1 gap-8 mt-2 ml-4'>
         {Object.keys(navToConst).map((navKey) => {
           return (
             <div
@@ -43,6 +44,7 @@ const Header = () => {
           );
         })}
       </div>
+      <AboutMe />
     </div>
   );
 };

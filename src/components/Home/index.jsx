@@ -1,6 +1,6 @@
 import React from 'react';
 import HeiwaIcon from 'components/Custom/HeiwaIcon';
-import Heiwa from 'assets/images/heiwa.svg';
+import Heiwa from 'assets/images/heiwaDoodle.svg';
 
 const Home = () => {
   return (
